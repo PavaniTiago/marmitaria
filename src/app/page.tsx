@@ -76,12 +76,12 @@ export default function Home() {
           </div>
         </div>
       </div>
-        <div id="sobre" className="w-full h-full flex lg:flex-row flex-col-reverse items-center justify-evenly bg-white px-16 mt-32">
+        <div id="sobre" className="w-full h-full flex lg:flex-row flex-col-reverse items-center justify-center lg:justify-evenly bg-white px-16 mt-32">
           <div className="w-fit h-full flex flex-col justify-center items-center relative">
             <Image alt="elemento" src={element5} width={0} height={0} className="object-cover absolute -top-44 right-[28rem]" />
             <Image alt="elemento" src={element} width={0} height={0} className="object-cover absolute -bottom-12 left-[38rem]" />
-            <h2 className="text-6xl text-center lg:text-start font-bold self-start font-davidLibre pb-5">Nossa Nutricionista</h2>
-            <span className="text-md text-center lg:text-start lg:max-w-2xl self-start text-[#5C6574] leading-7 pb-12">
+            <h2 className="text-5xl lg:text-6xl text-center lg:text-start font-bold self-start font-davidLibre pb-5">Nossa Nutricionista</h2>
+            <span className="text-md text-center lg:text-start w-full lg:max-w-2xl self-start text-[#5C6574] leading-7 pb-12 px-4">
               Nossas marmitas, criadas pela nossa experiente nutricionista, são a combinação perfeita entre sabor e saúde. 
               Com ingredientes frescos e balanceados, cada refeição é uma escolha inteligente para quem busca uma alimentação nutritiva e prática. 
               Deixe que nossa nutricionista cuide da sua saúde enquanto você aproveita o prazer de uma refeição deliciosa.
