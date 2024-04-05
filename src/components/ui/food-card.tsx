@@ -1,5 +1,7 @@
 import Image from "next/image"
 import prato from "../../../public/prato.png"
+import { Button } from "./button";
+import Link from "next/link";
 
 interface FoodCardProps {
     title: string;
@@ -95,6 +97,7 @@ export default function FoodCard({ title, price, price1, price2, price3, opcao1,
                     </div>
                 </>
             }
+            <Link target="_blank" className="absolute -bottom-10 font-semibold text-md" href="https://whatsmenu.com.br/saboraoponto"><Button className="w-64 py-6">Peça agora</Button></Link>
         </div>
     )
 }
