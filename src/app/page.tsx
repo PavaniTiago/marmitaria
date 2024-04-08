@@ -18,16 +18,23 @@ import { BenefitsList } from "@/components/ui/benefits-list";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import "aos/dist/aos.css"
+import AOS from "aos"
 
 export default function Home() {
+  
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const [message, setMessage] = useState("")
   return (
     <main className="flex h-full flex-col items-center justify-center overflow-hidden">
       <div className="w-full h-screen">
         <Image src={background} alt="background image" height={0} width={0} className="object-cover object-top w-full h-full"/>
       </div>
-      <div className="w-full h-full flex flex-col items-center justify-center lg:items-start lg:justify-start lg:text-start text-center px-8 lg:px-24 absolute top-[5rem] lg:top-[20rem] text-white gap-6">
+      <div data-aos="fade-left" className="w-full h-full flex flex-col items-center justify-center lg:items-start lg:justify-start lg:text-start text-center px-8 lg:px-24 absolute top-[5rem] lg:top-[20rem] text-white gap-6">
         <h2 className="text-4xl lg:text-5xl font-medium font-davidLibre max-w-2xl">Bem-vindo ao Sabor ao Ponto. Onde Cada Marmita é uma Experiência Única e Deliciosa</h2>
         <span className="text-lg max-w-md font-light leading-snug">Desde 2009, utilizando produtos de excelente qualidade, de marcas tradicionais e renomadas, trazendo o melhor sabor e uma expêriencia única aos nossos clientes.</span>
         <div className="flex gap-4">
@@ -43,13 +50,13 @@ export default function Home() {
         </div>
       </div>
       <div className="relative flex flex-col w-full h-full items-center justify-center bg-[#F3F4F4] pt-52 px-12">
-        <div id="menu" className="flex flex-col items-center justify-center relative">
+        <div data-aos="fade-up" id="menu" className="flex flex-col items-center justify-center relative">
           <Image alt="elemento" src={element2} width={0} height={0} className="object-cover absolute -top-12 right-[32rem]" />
           <Image alt="elemento" src={element} width={0} height={0} className="object-cover absolute -top-16 left-[28rem]" />
           <h2 className="text-6xl text-center lg:text-start font-bold font-davidLibre pb-5">Cardápio Semanal</h2>
           <span className="text-md lg:w-96 text-center text-[#5C6574] leading-7">Confira nosso cardápio semanal e clique no botão para realizar seu pedido.</span>
         </div>
-          <div className="flex flex-wrap items-center justify-center w-full gap-8 pt-40 gap-y-52">
+          <div data-aos="fade-up" className="flex flex-wrap items-center justify-center w-full gap-8 pt-40 gap-y-52">
             <FoodCard title="Segunda - Feira" price1={19} price2={21} price3={23} opcao1="strogonoff de frango" 
               description1="Acompanha batata palha e farofa" opcao2="carne moída c/ batata" description2="Acompanha batata palha e farofa" vegetable="Alface, tomate e cebola"/>        
             <FoodCard title="Terça - Feira" price1={19} price2={21} price3={23} opcao1="virado á paulista" description1="Acompanha Tutu de feijão, Pernil grelhado, Linguiça Toscana, Ovo, frito, Couve refogada, Farofa e Banana à milanesa" vegetable="Alface, tomate e cebola"/>
@@ -57,7 +64,7 @@ export default function Home() {
             <FoodCard title="Quinta - Feira" price1={19} price2={21} price3={23} opcao1="costela bovina com mandioca" description1="Acompanha farofa" opcao2="nhoque a bolognesa" description2="Acompanha farofa e legumes refogados" opcao3="carne moída c/ batata" description3="Acompanha batata palha e farofa" vegetable="Alface, tomate e cebola"/>
             <FoodCard title="Sexta - Feira" price1={21} price2={25} price3={29} opcao1="feijoada" description1="Nossa feijoada é composta por: Pernil, costelinha, carne seca, e calabresa. Acompanha vinagrete, farofa, torresmo e couve refogada." vegetable="Alface, tomate e cebola"/>
           </div>      
-        <div className="w-full h-full flex flex-col lg:flex-row items-center justify-evenly mt-64 mb-44">
+        <div data-aos="fade-up" className="w-full h-full flex flex-col lg:flex-row items-center justify-evenly mt-64 mb-44">
           <div className="flex flex-wrap items-center justify-center gap-12 gap-y-52 z-10">
             <FoodCard title="Prato Diet" optionalDescription={["light", "Arroz integral", "1 proteína", "Refogados", "Salada", "1 sache de molho", "1 barra de cereal"]} price={25}/>
             <FoodCard title="Prato Diário" optionalDescription={["ovo frito", "frango grelhado", "bife grelhado", "omelete c/ queijo", "omelete c/ legumes", "omelete r&j queijo e goiabada", "omelete de calabresa"]} price1={19} price2={21} price3={23} vegetable="Alface, tomate e cebola"/>
@@ -77,7 +84,7 @@ export default function Home() {
         </div>
       </div>
         <div id="sobre" className="w-full h-full flex lg:flex-row flex-col-reverse items-center justify-center lg:justify-evenly bg-white px-16 mt-32">
-          <div className="w-fit h-full flex flex-col justify-center items-center relative">
+          <div data-aos="fade-right" className="w-fit h-full flex flex-col justify-center items-center relative">
             <Image alt="elemento" src={element5} width={0} height={0} className="object-cover absolute -top-44 right-[28rem]" />
             <Image alt="elemento" src={element} width={0} height={0} className="object-cover absolute -bottom-12 left-[38rem]" />
             <h2 className="text-5xl lg:text-6xl text-center lg:text-start font-bold self-start font-davidLibre pb-5">Nossa Nutricionista</h2>
@@ -99,9 +106,9 @@ export default function Home() {
               <Link target="_blank" href="https://whatsmenu.com.br/saboraoponto"><Button className="rounded-tl-xl rounded-br-xl font-davidLibre text-md w-40 py-6">Peça agora</Button></Link>
             </div>
           </div>
-          <Image alt="imagem da nossa nutriocionista" src={nutricionista} width={0} height={0} className="object-cover"/>
+          <Image data-aos="fade-left" alt="imagem da nossa nutriocionista" src={nutricionista} width={0} height={0} className="object-cover"/>
         </div>
-        <div className="w-full h-full flex items-center justify-center bg-white lg:px-12 mt-40">
+        <div data-aos="fade-bottom" className="w-full h-full flex items-center justify-center bg-white lg:px-12 mt-40">
           <div className="flex items-center justify-center w-fit">
             <Image alt="background" src={background2} width={0} height={0} className="object-cover h-[20rem] relative lg:rounded-[2rem] brightness-75" />
             <div className="flex flex-col items-center justify-center absolute px-4">
@@ -115,7 +122,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row w-full max-w-5xl h-full items-center justify-center px-6 mt-20 lg:mt-32">
+        <div data-aos="fade-bottom" className="flex flex-col lg:flex-row w-full max-w-5xl h-full items-center justify-center px-6 mt-20 lg:mt-32">
           <div className="flex flex-col w-full h-full text-black">
             <div className="flex items-center justify-center lg:justify-start">
               <Image src={logo} alt="marmitaria logo" height={0} width={0} className="object-cover w-20 h-20" />
