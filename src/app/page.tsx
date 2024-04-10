@@ -46,7 +46,7 @@ export default function Home() {
           <Link target="_blank" href="https://www.instagram.com/saboraoponto_marmitas/">
           <Button className="rounded-full h-10 w-10 p-1"><InstagramLogoIcon width={26} height={26}/></Button>
           </Link>
-          <Button className="rounded-full h-10 w-10 p-1"><FacebookLogo size={32}/></Button>
+          <Link href="https://web.facebook.com/cozinhasaboraoponto/?_rdc=1&_rdr"><Button className="rounded-full h-10 w-10 p-1"><FacebookLogo size={32}/></Button></Link>
         </div>
       </div>
       <div className="relative flex flex-col w-full h-full items-center justify-center bg-[#F3F4F4] pt-52 px-12">
@@ -132,11 +132,11 @@ export default function Home() {
             <div className="flex gap-4 lg:gap-16 justify-center lg:justify-start items-center">
               <div className="flex flex-col gap-1 items-start justify-start">
                 <span className="text-md text-[#5C6574]">Segunda - Sexta</span>
-                <span className="text-md text-[#5C6574]">08:00 - 16:00</span>
+                <span className="text-md text-[#5C6574]">11:00 - 13:30</span>
               </div>
               <div className="flex flex-col gap-1 items-start justify-center">
                 <span className="text-md text-[#5C6574]">Sábado</span>
-                <span className="text-md text-[#5C6574]">08:00 - 15:00</span>
+                <span className="text-md text-[#5C6574]">FECHADO</span>
               </div>
               <div className="flex flex-col gap-1 items-start justify-center">
                 <span className="text-md text-[#5C6574]">Domingo</span>
@@ -148,7 +148,7 @@ export default function Home() {
             <span className="text-md font-bold uppercase">Sigas nos nas Redes Sociais</span>
             <div className="flex gap-3 items-center justify-center lg:justify-start">
               <Link target="_blank" href="https://www.instagram.com/saboraoponto_marmitas/"><Button className="rounded-full h-10 w-10 p-1"><InstagramLogoIcon width={24} height={24}/></Button></Link>
-              <Button className="rounded-full h-10 w-10 p-1"><FacebookLogo width={24} height={24}/></Button>
+              <Link href="https://web.facebook.com/cozinhasaboraoponto/?_rdc=1&_rdr"><Button className="rounded-full h-10 w-10 p-1"><FacebookLogo size={32}/></Button></Link>
               <Link href="https://api.whatsapp.com/send/?phone=5519981662270&text=Ol%C3%A1%2C+gostaria+de+pedir+uma+refei%C3%A7%C3%A3o%21+&type=phone_number&app_absent=0"><Button className="rounded-full h-10 w-10 p-1"><Phone width={24} height={24}/></Button></Link>
             </div>
           </div>
