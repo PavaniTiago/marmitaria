@@ -1,20 +1,35 @@
+"use client" 
+
 import { Quotes } from "@phosphor-icons/react/dist/ssr";
 import { StarFilledIcon } from "@radix-ui/react-icons";
 import Image, { StaticImageData } from "next/image";
+import { useState } from "react";
 
 interface FeedBacks {
     title: string;
-    description: string;
+    description?: string;
     photo: StaticImageData;
     name: string;
+    audioSrc?: string;
 }
+export function FeedBacks({ title, description, name, photo, audioSrc }: FeedBacks){
+    const [isPlaying, setIsPlaying] = useState(false);
+    const audio = new Audio(audioSrc)
+    
+    const togglePlay = () => {
+        if (isPlaying) {
+            audio.pause();
+        } else {
+            audio.play();
+        }
+        setIsPlaying(!isPlaying);
+    };
 
-export function FeedBacks({ title, description, name, photo }: FeedBacks){
     return (
         <div className="relative flex flex-col items-start justify-around w-full lg:w-[28rem] h-80 px-6 bg-white lg:rounded-tl-[3rem] lg:rounded-br-[3rem] rounded-xl shadow-xl text-secondary">
-            <Image src={photo} width={0} height={0} className="self-center object-cover w-28 h-28 absolute -top-16 rounded-full" alt="user photo"/>
+            <Image src={photo} width={0} height={0} className="self-center object-cover w-28 h-28 absolute -top-20 rounded-full" alt="user photo"/>
             <Quotes className="w-10 h-10"/>
-            <div className="flex flex-col gap-2 text-center">
+            <div className="flex flex-col w-full items-center justify-center gap-2 text-center">
                 <div className="flex gap-2 mb-6 items-center justify-center">
                 <StarFilledIcon width={20} height={20} className="text-yellow-500"/>
                 <StarFilledIcon width={20} height={20} className="text-yellow-500"/>
@@ -24,6 +39,14 @@ export function FeedBacks({ title, description, name, photo }: FeedBacks){
                 </div>
                 <h2 className="text-2xl font-semibold">{title}</h2> 
                 <span className="text-md mb-3 px-12">{description}</span>
+                {audioSrc && 
+                <>
+                    <h2>Clique para ouvir o feedback</h2>
+                    <button onClick={togglePlay} className="bg-primary px-6 py-2 rounded-lg text-white border-none">
+                        {isPlaying ? 'Pause' : 'Play'}
+                    </button>
+                </>
+                }
             </div>
             <div className="flex  gap-3 self-center mb-2">
                 <div className="flex flex-col self-center">

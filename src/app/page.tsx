@@ -15,6 +15,8 @@ import element5 from "../../public/element5.png"
 import user2 from "../../public/user2.jpg"
 import user3 from "../../public/user3.jpg"
 import user1 from "../../public/user1.jpg"
+import user4 from "../../public/user4.jpg"
+import user5 from "../../public/user5.jpg"
 import nutricionista from "../../public/nutricionista.png"
 import FoodCard from "@/components/ui/food-card";
 import { BenefitsList } from "@/components/ui/benefits-list";
@@ -71,7 +73,7 @@ export default function Home() {
           </div>      
         <div data-aos="fade-up" className="w-full h-full flex flex-col lg:flex-row items-center justify-evenly mt-64 mb-44">
           <div className="flex flex-wrap items-center justify-center gap-12 gap-y-52 z-10">
-            <FoodCard title="Prato Diet" optionalDescription={["light", "Arroz integral", "1 proteína", "Refogados", "Salada", "1 sache de molho", "1 barra de cereal"]} price={25}/>
+            <FoodCard title="Prato Fit" optionalDescription={["light", "Arroz integral", "1 proteína", "Refogados", "Salada", "1 sache de molho", "1 barra de cereal"]} price={25}/>
             <FoodCard title="Prato Diário" optionalDescription={["ovo frito", "frango grelhado", "bife grelhado", "omelete c/ queijo", "omelete c/ legumes", "omelete r&j queijo e goiabada", "omelete de calabresa"]} price1={19} price2={21} price3={23} vegetable="Alface, tomate e cebola"/>
           </div>
           <div className="relative flex flex-col h-full mt-40 text-center lg:text-start">
@@ -116,10 +118,12 @@ export default function Home() {
         <div className="flex flex-col w-full h-full items-center justify-center mt-20 px-4 py-28 bg-[#F3F4F4]">
         <h2 data-aos="fade-left" className="text-5xl lg:text-6xl text-center font-bold font-davidLibre pb-5">Feedbacks dos Clientes</h2>
         <span data-aos="fade-right" className="text-md text-center lg:w-[32rem] text-[#5C6574] leading-7 pb-16">Um pouco sobre os feedbacks dos nossos clientes que pediram e gostaram muito das nossas marmitas!</span>
-          <div data-aos="fade-bottom" className="flex flex-wrap gap-12 mt-6">
+          <div data-aos="fade-bottom" className="flex flex-wrap items-center justify-center gap-24 mt-6">
             <FeedBacks description="A comida estava deliciosa, bem temperada e fresca. Adorei a variedade de opções saudáveis disponíveis." name="Ana julia" photo={user1} title="Comida espetacular"/>
             <FeedBacks description="O serviço foi excelente, a entrega foi pontual e o pedido veio muito bem embalado. A apresentação dos pratos também foi ótima." name="João" photo={user2} title="Tempero maravilhoso"/>
             <FeedBacks description="A marmitaria oferece uma ótima relação custo-benefício, com pratos saborosos e preço acessível. Gostei especialmente da atenção aos detalhes." name="Flávia" photo={user3} title="Refeição completa"/>
+            <FeedBacks audioSrc="/audio.mp3" name="Eliane" photo={user4} title="Comida maravilhosa"/>
+            <FeedBacks audioSrc="/audio2.mp3" name="Cliente" photo={user5} title="Comida boa!"/>
           </div>
         </div>
         <div data-aos="fade-bottom" className="w-full h-full flex items-center justify-center bg-white lg:px-12 mt-40">
