@@ -29,7 +29,7 @@ export function Header(){
                     <Link href="https://linktr.ee/saboraoponto_">Contato</Link>
                 </div>
             </div>
-            <Link href="https://whatsmenu.com.br/saboraoponto" className="hidden lg:block"><Button size="lg" className="rounded-tl-xl rounded-br-xl py-6 font-davidLibre text-md">Peça agora</Button></Link>
+            <Link href="https://whatsmenu.com.br/saboraoponto" className="hidden lg:block"><Button size="lg" className="rounded-tl-xl rounded-br-xl py-6 text-md">Peça agora</Button></Link>
             <div className="block lg:hidden">
                 <Sheet>
                     <SheetTrigger asChild>

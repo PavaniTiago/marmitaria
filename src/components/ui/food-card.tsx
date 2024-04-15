@@ -1,10 +1,11 @@
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 import prato from "../../../public/prato.png"
 import { Button } from "./button";
 import Link from "next/link";
 
 interface FoodCardProps {
     title: string;
+    img: StaticImageData;
     price?: number;
     price1?: number;
     price2?: number;
@@ -19,11 +20,11 @@ interface FoodCardProps {
     optionalDescription?: string[];
 }
 
-export default function FoodCard({ title, price, price1, price2, price3, opcao1, opcao2, opcao3, description1, description2, description3, vegetable, optionalDescription} : FoodCardProps){
+export default function FoodCard({ title, price, price1, price2, price3, opcao1, opcao2, opcao3, description1, description2, description3, vegetable, optionalDescription, img} : FoodCardProps){
     return (
         <div className="relative flex flex-col items-center justify-center bg-white w-80 h-[34rem] rounded-xl rounded-tl-[4rem] rounde-br-[4rem] shadow-xl">
             <div className="absolute -top-20">
-                <Image src={prato} alt="prato da marmitaria" width={0} height={0} className="object-cover"/>
+                <Image src={img} alt="prato da marmitaria" width={0} height={0} className="object-cover rounded-full w-44 h-44 shadow-lg"/>
                 {price && 
                     <>
                         <div className="flex items-center justify-center absolute rounded-full h-12 w-12 top-0 right-[39%] translate-y-[-50%] bg-secondary text-white shadow-lg shadow-black/60">
@@ -37,7 +38,7 @@ export default function FoodCard({ title, price, price1, price2, price3, opcao1,
                             <span className="text-sm font-bold">R$ {price1}</span>
                             <span className="absolute -top-8 text-primary text-xl font-bold">P</span>
                         </div>
-                        <div className="flex items-center justify-center absolute rounded-full h-12 w-12 top-0 right-[39%] translate-y-[-50%] bg-secondary text-white shadow-lg shadow-black/60">
+                        <div className="flex items-center justify-center absolute rounded-full h-12 w-12 top-0 right-[37%] translate-y-[-50%] bg-secondary text-white shadow-lg shadow-black/60">
                             <span className="text-sm font-bold">R$ {price2}</span>
                             <span className="absolute -top-8 text-primary text-xl font-bold">M</span>
                         </div>

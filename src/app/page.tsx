@@ -17,6 +17,13 @@ import user3 from "../../public/user3.jpg"
 import user1 from "../../public/user1.jpg"
 import user4 from "../../public/user4.jpg"
 import user5 from "../../public/user5.jpg"
+import dish1 from "../../public/dish1.webp"
+import dish2 from "../../public/dish2.webp"
+import dish3 from "../../public/dish3.webp"
+import dish4 from "../../public/dish4.webp"
+import dish5 from "../../public/dish5.webp"
+import fitnessDish from "../../public/fitnessdish.webp"
+import dailyDish from "../../public/dailydish.webp"
 import nutricionista from "../../public/nutricionista.png"
 import FoodCard from "@/components/ui/food-card";
 import { BenefitsList } from "@/components/ui/benefits-list";
@@ -46,7 +53,7 @@ export default function Home() {
         <span className="text-lg max-w-md font-light leading-snug">Desde 2009, utilizando produtos de excelente qualidade, de marcas tradicionais e renomadas, trazendo o melhor sabor e uma expêriencia única aos nossos clientes.</span>
         <div className="flex gap-4">
           <Link href="#menu"><Button size="lg" variant="secondary" className="rounded-tl-xl rounded-br-xl py-6 font-davidLibre text-md text-white">Menu</Button></Link>
-          <Link target="_blank" href="https://whatsmenu.com.br/saboraoponto"><Button className="rounded-tl-xl rounded-br-xl font-davidLibre text-md w-40 py-6">Peça agora</Button></Link>
+          <Link target="_blank" href="https://whatsmenu.com.br/saboraoponto"><Button className="rounded-tl-xl rounded-br-xl text-md w-40 py-6">Peça agora</Button></Link>
 
         </div>
         <div className="flex gap-2">
@@ -64,17 +71,17 @@ export default function Home() {
           <span className="text-md lg:w-96 text-center text-[#5C6574] leading-7">Confira nosso cardápio semanal e clique no botão para realizar seu pedido.</span>
         </div>
           <div data-aos="fade-up" className="flex flex-wrap items-center justify-center w-full gap-8 pt-40 gap-y-52">
-            <FoodCardV2 title="Segunda - Feira" price1={19} price2={21} price3={23} opcao1="strogonoff de frango" 
-              description="Acompanha batata palha e farofa"/>        
-            <FoodCardV2 title="Terça - Feira" price1={19} price2={21} price3={23} opcao1="virado á paulista" description="Acompanha Tutu de feijão, Pernil grelhado, Linguiça Toscana, Ovo, frito, Couve refogada, Farofa e Banana à milanesa"/>
-            <FoodCardV2 title="Quarta - Feira" price1={19} price2={21} price3={23} opcao1="frango à milanesa" description="Acompanha farofa e legumes refogados"/>
-            <FoodCardV2 title="Quinta - Feira" price1={19} price2={21} price3={23} opcao1="costela bovina com mandioca" description="Acompanha farofa"/>
-            <FoodCardV2 title="Sexta - Feira" price1={21} price2={25} price3={29} opcao1="feijoada" description="Nossa feijoada é composta por: Pernil, costelinha, carne seca, e calabresa. Acompanha vinagrete, farofa, torresmo e couve refogada."/>
+            <FoodCardV2 img={dish1} title="Segunda - Feira" price1={19} price2={21} price3={23} opcao1="strogonoff de frango" 
+              description="Acompanha batata palha e farofa" opcao2="Carne moída c/ batata" description2="Acompanha batata palha e farofa"/>        
+            <FoodCardV2 img={dish2} title="Terça - Feira" price1={19} price2={21} price3={23} opcao1="virado á paulista" description="Acompanha Tutu de feijão, Pernil grelhado, Linguiça Toscana, Ovo, frito, Couve refogada, Farofa e Banana à milanesa"/>
+            <FoodCardV2 img={dish3} title="Quarta - Feira" price1={19} price2={21} price3={23} opcao1="frango à milanesa" description="Acompanha farofa e legumes refogados"/>
+            <FoodCardV2 img={dish4} title="Quinta - Feira" price1={19} price2={21} price3={23} opcao1="costela bovina com mandioca" description="Acompanha farofa" opcao2="Frango a parmegiana" description2="Acompanha legumes refogados e farofa"/>
+            <FoodCardV2 img={dish5} title="Sexta - Feira" price1={21} price2={25} price3={29} opcao1="feijoada" description="Nossa feijoada é composta por: Pernil, costelinha, carne seca, e calabresa. Acompanha vinagrete, farofa, torresmo e couve refogada."/>
           </div>      
         <div data-aos="fade-up" className="w-full h-full flex flex-col lg:flex-row items-center justify-evenly mt-64 mb-44">
           <div className="flex flex-wrap items-center justify-center gap-12 gap-y-52 z-10">
-            <FoodCard title="Prato Fit" optionalDescription={["light", "Arroz integral", "1 proteína", "Refogados", "Salada", "1 sache de molho", "1 barra de cereal"]} price={25}/>
-            <FoodCard title="Prato Diário" optionalDescription={["ovo frito", "frango grelhado", "bife grelhado", "omelete c/ queijo", "omelete c/ legumes", "omelete r&j queijo e goiabada", "omelete de calabresa"]} price1={19} price2={21} price3={23} vegetable="Alface, tomate e cebola"/>
+            <FoodCard img={fitnessDish} title="Prato Fit" optionalDescription={["light", "Arroz integral", "1 proteína", "Refogados", "Salada", "1 sache de molho", "1 barra de cereal"]} price={25}/>
+            <FoodCard img={dailyDish} title="Prato Diário" optionalDescription={["ovo frito", "frango grelhado", "bife grelhado", "omelete c/ queijo", "omelete c/ legumes", "omelete r&j queijo e goiabada", "omelete de calabresa"]} price1={19} price2={21} price3={23} vegetable="Alface, tomate e cebola"/>
           </div>
           <div className="relative flex flex-col h-full mt-40 text-center lg:text-start">
             <Image alt="elemento" src={element3} width={0} height={0} className="object-cover absolute top-16 -right-[16rem]" />
@@ -85,7 +92,7 @@ export default function Home() {
             <span className="text-md w-96 text-[#5C6574] leading-7 pb-16">Acesse nosso cardápio e faça seu pedido em nosso cardápio online!</span>
             <div className="flex items-center justify-center lg:justify-start gap-6">
               <Link href="#menu"><Button size="lg" variant="secondary" className="rounded-tl-xl rounded-br-xl py-6 font-davidLibre text-md text-white">Menu</Button></Link>
-              <Link target="_blank" href="https://whatsmenu.com.br/saboraoponto"><Button className="rounded-tl-xl rounded-br-xl font-davidLibre text-md w-40 py-6">Peça agora</Button></Link>
+              <Link target="_blank" href="https://whatsmenu.com.br/saboraoponto"><Button className="rounded-tl-xl rounded-br-xl text-md w-40 py-6">Peça agora</Button></Link>
             </div>
           </div>
         </div>
@@ -110,7 +117,7 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-start gap-6 mt-11">
               <Link href="#menu"><Button size="lg" variant="secondary" className="rounded-tl-xl rounded-br-xl py-6 font-davidLibre text-md text-white">Menu</Button></Link>
-              <Link target="_blank" href="https://whatsmenu.com.br/saboraoponto"><Button className="rounded-tl-xl rounded-br-xl font-davidLibre text-md w-40 py-6">Peça agora</Button></Link>
+              <Link target="_blank" href="https://whatsmenu.com.br/saboraoponto"><Button className="rounded-tl-xl rounded-br-xl text-md w-40 py-6">Peça agora</Button></Link>
             </div>
           </div>
           <Image data-aos="fade-left" alt="imagem da nossa nutriocionista" src={nutricionista} width={0} height={0} className="object-cover"/>
