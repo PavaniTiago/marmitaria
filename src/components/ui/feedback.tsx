@@ -1,10 +1,6 @@
-"use client" 
-
 import { Quotes } from "@phosphor-icons/react/dist/ssr";
 import { StarFilledIcon } from "@radix-ui/react-icons";
 import Image, { StaticImageData } from "next/image";
-import { useState } from "react";
-
 interface FeedBacks {
     title: string;
     description?: string;
@@ -13,17 +9,7 @@ interface FeedBacks {
     audioSrc?: string;
 }
 export function FeedBacks({ title, description, name, photo, audioSrc }: FeedBacks){
-    const [isPlaying, setIsPlaying] = useState(false);
-    const audio = new Audio(audioSrc)
-    
-    const togglePlay = () => {
-        if (isPlaying) {
-            audio.pause();
-        } else {
-            audio.play();
-        }
-        setIsPlaying(!isPlaying);
-    };
+    console.log("Caminho do arquivo de áudio:", audioSrc);
 
     return (
         <div className="relative flex flex-col items-start justify-around w-full lg:w-[28rem] h-80 px-6 bg-white lg:rounded-tl-[3rem] lg:rounded-br-[3rem] rounded-xl shadow-xl text-secondary">
@@ -42,9 +28,9 @@ export function FeedBacks({ title, description, name, photo, audioSrc }: FeedBac
                 {audioSrc && 
                 <>
                     <h2>Clique para ouvir o feedback</h2>
-                    <button onClick={togglePlay} className="bg-primary px-6 py-2 rounded-lg text-white border-none">
-                        {isPlaying ? 'Pause' : 'Play'}
-                    </button>
+                    <audio controls>
+                        <source src={audioSrc} type="audio/mpeg"/>
+                    </audio>
                 </>
                 }
             </div>

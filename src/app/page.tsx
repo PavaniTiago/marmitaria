@@ -119,11 +119,11 @@ export default function Home() {
         <h2 data-aos="fade-left" className="text-5xl lg:text-6xl text-center font-bold font-davidLibre pb-5">Feedbacks dos Clientes</h2>
         <span data-aos="fade-right" className="text-md text-center lg:w-[32rem] text-[#5C6574] leading-7 pb-16">Um pouco sobre os feedbacks dos nossos clientes que pediram e gostaram muito das nossas marmitas!</span>
           <div data-aos="fade-bottom" className="flex flex-wrap items-center justify-center gap-24 mt-6">
-            <FeedBacks description="A comida estava deliciosa, bem temperada e fresca. Adorei a variedade de opções saudáveis disponíveis." name="Ana julia" photo={user1} title="Comida espetacular"/>
-            <FeedBacks description="O serviço foi excelente, a entrega foi pontual e o pedido veio muito bem embalado. A apresentação dos pratos também foi ótima." name="João" photo={user2} title="Tempero maravilhoso"/>
-            <FeedBacks description="A marmitaria oferece uma ótima relação custo-benefício, com pratos saborosos e preço acessível. Gostei especialmente da atenção aos detalhes." name="Flávia" photo={user3} title="Refeição completa"/>
-            <FeedBacks audioSrc="/audio.mp3" name="Eliane" photo={user4} title="Comida maravilhosa"/>
-            <FeedBacks audioSrc="/audio2.mp3" name="Cliente" photo={user5} title="Comida boa!"/>
+            <FeedBacks description="Eu que agradeço o capricho de vocês, Meu Deus Nhoque maravilhoso. 😍😍" name="Rose" photo={user1} title="Comida espetacular"/>
+            <FeedBacks description="Muito obrigado a comida de vocês é maravilhosa" name="João" photo={user2} title="Tempero maravilhoso"/>
+            <FeedBacks description="Qualidade excelentíssima, maravilhosa, continuem assim que irão longe sucesso para vocês! já falei pro meu esposo ontem próxima iremos pegar aí❤" name="Flávia" photo={user3} title="Refeição completa"/>
+            <FeedBacks audioSrc="/audio.mp3" name="Eliane" photo={user5} title="Comida maravilhosa"/>
+            <FeedBacks audioSrc="/audio2.mp3" name="Cliente" photo={user4} title="Comida boa!"/>
           </div>
         </div>
         <div data-aos="fade-bottom" className="w-full h-full flex items-center justify-center bg-white lg:px-12 mt-40">
