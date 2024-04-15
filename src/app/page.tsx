@@ -12,6 +12,9 @@ import element2 from "../../public/element2.png"
 import element3 from "../../public/element3.png"
 import element4 from "../../public/element4.png"
 import element5 from "../../public/element5.png"
+import user2 from "../../public/user2.jpg"
+import user3 from "../../public/user3.jpg"
+import user1 from "../../public/user1.jpg"
 import nutricionista from "../../public/nutricionista.png"
 import FoodCard from "@/components/ui/food-card";
 import { BenefitsList } from "@/components/ui/benefits-list";
@@ -21,6 +24,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import "aos/dist/aos.css"
 import AOS from "aos"
+import FoodCardV2 from "@/components/ui/food-cardv2";
+import { FeedBacks } from "@/components/ui/feedback";
 
 export default function Home() {
   
@@ -57,12 +62,12 @@ export default function Home() {
           <span className="text-md lg:w-96 text-center text-[#5C6574] leading-7">Confira nosso cardápio semanal e clique no botão para realizar seu pedido.</span>
         </div>
           <div data-aos="fade-up" className="flex flex-wrap items-center justify-center w-full gap-8 pt-40 gap-y-52">
-            <FoodCard title="Segunda - Feira" price1={19} price2={21} price3={23} opcao1="strogonoff de frango" 
-              description1="Acompanha batata palha e farofa" opcao2="carne moída c/ batata" description2="Acompanha batata palha e farofa" vegetable="Alface, tomate e cebola"/>        
-            <FoodCard title="Terça - Feira" price1={19} price2={21} price3={23} opcao1="virado á paulista" description1="Acompanha Tutu de feijão, Pernil grelhado, Linguiça Toscana, Ovo, frito, Couve refogada, Farofa e Banana à milanesa" vegetable="Alface, tomate e cebola"/>
-            <FoodCard title="Quarta - Feira" price1={19} price2={21} price3={23} opcao1="frango à milanesa" description1="Acompanha farofa e legumes refogados" opcao2="nhoque a bolognesa" description2="Acompanha farofa e legumes refogados" vegetable="Alface, tomate e cebola"/>
-            <FoodCard title="Quinta - Feira" price1={19} price2={21} price3={23} opcao1="costela bovina com mandioca" description1="Acompanha farofa" opcao2="nhoque a bolognesa" description2="Acompanha farofa e legumes refogados" opcao3="carne moída c/ batata" description3="Acompanha batata palha e farofa" vegetable="Alface, tomate e cebola"/>
-            <FoodCard title="Sexta - Feira" price1={21} price2={25} price3={29} opcao1="feijoada" description1="Nossa feijoada é composta por: Pernil, costelinha, carne seca, e calabresa. Acompanha vinagrete, farofa, torresmo e couve refogada." vegetable="Alface, tomate e cebola"/>
+            <FoodCardV2 title="Segunda - Feira" price1={19} price2={21} price3={23} opcao1="strogonoff de frango" 
+              description="Acompanha batata palha e farofa"/>        
+            <FoodCardV2 title="Terça - Feira" price1={19} price2={21} price3={23} opcao1="virado á paulista" description="Acompanha Tutu de feijão, Pernil grelhado, Linguiça Toscana, Ovo, frito, Couve refogada, Farofa e Banana à milanesa"/>
+            <FoodCardV2 title="Quarta - Feira" price1={19} price2={21} price3={23} opcao1="frango à milanesa" description="Acompanha farofa e legumes refogados"/>
+            <FoodCardV2 title="Quinta - Feira" price1={19} price2={21} price3={23} opcao1="costela bovina com mandioca" description="Acompanha farofa"/>
+            <FoodCardV2 title="Sexta - Feira" price1={21} price2={25} price3={29} opcao1="feijoada" description="Nossa feijoada é composta por: Pernil, costelinha, carne seca, e calabresa. Acompanha vinagrete, farofa, torresmo e couve refogada."/>
           </div>      
         <div data-aos="fade-up" className="w-full h-full flex flex-col lg:flex-row items-center justify-evenly mt-64 mb-44">
           <div className="flex flex-wrap items-center justify-center gap-12 gap-y-52 z-10">
@@ -107,6 +112,15 @@ export default function Home() {
             </div>
           </div>
           <Image data-aos="fade-left" alt="imagem da nossa nutriocionista" src={nutricionista} width={0} height={0} className="object-cover"/>
+        </div>
+        <div className="flex flex-col w-full h-full items-center justify-center mt-20 px-4 py-28 bg-[#F3F4F4]">
+        <h2 data-aos="fade-left" className="text-5xl lg:text-6xl text-center font-bold font-davidLibre pb-5">Feedbacks dos Clientes</h2>
+        <span data-aos="fade-right" className="text-md text-center lg:w-[32rem] text-[#5C6574] leading-7 pb-16">Um pouco sobre os feedbacks dos nossos clientes que pediram e gostaram muito das nossas marmitas!</span>
+          <div data-aos="fade-bottom" className="flex flex-wrap gap-12 mt-6">
+            <FeedBacks description="A comida estava deliciosa, bem temperada e fresca. Adorei a variedade de opções saudáveis disponíveis." name="Ana julia" photo={user1} title="Comida espetacular"/>
+            <FeedBacks description="O serviço foi excelente, a entrega foi pontual e o pedido veio muito bem embalado. A apresentação dos pratos também foi ótima." name="João" photo={user2} title="Tempero maravilhoso"/>
+            <FeedBacks description="A marmitaria oferece uma ótima relação custo-benefício, com pratos saborosos e preço acessível. Gostei especialmente da atenção aos detalhes." name="Flávia" photo={user3} title="Refeição completa"/>
+          </div>
         </div>
         <div data-aos="fade-bottom" className="w-full h-full flex items-center justify-center bg-white lg:px-12 mt-40">
           <div className="flex items-center justify-center w-fit">
