@@ -9,8 +9,6 @@ interface FeedBacks {
     audioSrc?: string;
 }
 export function FeedBacks({ title, description, name, photo, audioSrc }: FeedBacks){
-    console.log("Caminho do arquivo de áudio:", audioSrc);
-
     return (
         <div className="relative flex flex-col items-start justify-around w-full lg:w-[28rem] h-80 px-6 bg-white lg:rounded-tl-[3rem] lg:rounded-br-[3rem] rounded-xl shadow-xl text-secondary">
             <Image src={photo} width={0} height={0} className="self-center object-cover w-28 h-28 absolute -top-20 rounded-full" alt="user photo"/>

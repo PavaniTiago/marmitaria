@@ -15,7 +15,7 @@ import element5 from "../../public/element5.png"
 import user2 from "../../public/user2.jpg"
 import user3 from "../../public/user3.jpg"
 import user1 from "../../public/user1.jpg"
-import user4 from "../../public/user4.jpg"
+import user4 from "../../public/user4.webp"
 import user5 from "../../public/user5.jpg"
 import dish1 from "../../public/dish1.webp"
 import dish2 from "../../public/dish2.webp"
@@ -74,9 +74,9 @@ export default function Home() {
             <FoodCardV2 img={dish1} title="Segunda - Feira" price1={19} price2={21} price3={23} opcao1="strogonoff de frango" 
               description="Acompanha batata palha e farofa" opcao2="Carne moída c/ batata" description2="Acompanha batata palha e farofa"/>        
             <FoodCardV2 img={dish2} title="Terça - Feira" price1={19} price2={21} price3={23} opcao1="virado á paulista" description="Acompanha Tutu de feijão, Pernil grelhado, Linguiça Toscana, Ovo, frito, Couve refogada, Farofa e Banana à milanesa"/>
-            <FoodCardV2 img={dish3} title="Quarta - Feira" price1={19} price2={21} price3={23} opcao1="frango à milanesa" description="Acompanha farofa e legumes refogados"/>
+            <FoodCardV2 img={dish5} title="Quarta - Feira" price1={19} price2={21} price3={23} opcao1="frango à milanesa" description="Acompanha farofa e legumes refogados"/>
             <FoodCardV2 img={dish4} title="Quinta - Feira" price1={19} price2={21} price3={23} opcao1="costela bovina com mandioca" description="Acompanha farofa" opcao2="Frango a parmegiana" description2="Acompanha legumes refogados e farofa"/>
-            <FoodCardV2 img={dish5} title="Sexta - Feira" price1={21} price2={25} price3={29} opcao1="feijoada" description="Nossa feijoada é composta por: Pernil, costelinha, carne seca, e calabresa. Acompanha vinagrete, farofa, torresmo e couve refogada."/>
+            <FoodCardV2 img={dish3} title="Sexta - Feira" price1={21} price2={25} price3={29} opcao1="feijoada" description="Nossa feijoada é composta por: Pernil, costelinha, carne seca, e calabresa. Acompanha vinagrete, farofa, torresmo e couve refogada."/>
           </div>      
         <div data-aos="fade-up" className="w-full h-full flex flex-col lg:flex-row items-center justify-evenly mt-64 mb-44">
           <div className="flex flex-wrap items-center justify-center gap-12 gap-y-52 z-10">
