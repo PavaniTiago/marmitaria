@@ -17,13 +17,13 @@ import user3 from "../../public/user3.jpg"
 import user1 from "../../public/user1.jpg"
 import user4 from "../../public/user4.webp"
 import user5 from "../../public/user5.jpg"
-import dish1 from "../../public/dish1.webp"
-import dish2 from "../../public/dish2.webp"
-import dish3 from "../../public/dish3.webp"
-import dish4 from "../../public/dish4.webp"
-import dish5 from "../../public/dish5.webp"
-import fitnessDish from "../../public/fitnessdish.webp"
-import dailyDish from "../../public/dailydish.webp"
+import dish1 from "../../public/dish1.png"
+import dish2 from "../../public/dish2.png"
+import dish3 from "../../public/dish3.png"
+import dish4 from "../../public/dish4.png"
+import dish5 from "../../public/dish5.png"
+import fitnessDish from "../../public/fitnessdish.png"
+import dailyDish from "../../public/dailydish.png"
 import nutricionista from "../../public/nutricionista.png"
 import FoodCard from "@/components/ui/food-card";
 import { BenefitsList } from "@/components/ui/benefits-list";
@@ -63,20 +63,22 @@ export default function Home() {
           <Link href="https://web.facebook.com/cozinhasaboraoponto/?_rdc=1&_rdr"><Button className="rounded-full h-10 w-10 p-1"><FacebookLogo size={32}/></Button></Link>
         </div>
       </div>
-      <div className="relative flex flex-col w-full h-full items-center justify-center bg-[#F3F4F4] pt-52 px-12">
-        <div data-aos="fade-up" id="menu" className="flex flex-col items-center justify-center relative">
-          <Image alt="elemento" src={element2} width={0} height={0} className="object-cover absolute -top-12 right-[32rem]" />
-          <Image alt="elemento" src={element} width={0} height={0} className="object-cover absolute -top-16 left-[28rem]" />
-          <h2 className="text-6xl text-center lg:text-start font-bold font-davidLibre pb-5">Cardápio Semanal</h2>
-          <span className="text-md lg:w-96 text-center text-[#5C6574] leading-7">Confira nosso cardápio semanal e clique no botão para realizar seu pedido.</span>
+      <div className="relative flex flex-col w-full h-full items-center justify-center bg-[#F3F4F4]">
+        <div data-aos="fade-up" id="menu" className="flex w-full bg-primary py-12 flex-col items-center justify-center relative">
+          <Image alt="elemento" src={element2} width={0} height={0} className="object-cover absolute top-4 right-[19rem] w-44" />
+          <Image alt="elemento" src={element} width={0} height={0} className="object-cover absolute top-4 left-[22rem] w-36" />
+          <h2 className="text-6xl text-center lg:text-start text-white font-bold font-davidLibre pb-5">Cardápio Semanal</h2>
+          <span className="text-md lg:w-96 text-center text-[#e7e7e7] leading-7">Confira nosso cardápio semanal e clique no botão para realizar seu pedido.</span>
         </div>
-          <div data-aos="fade-up" className="flex flex-wrap items-center justify-center w-full gap-8 pt-40 gap-y-52">
+          <div data-aos="fade-up" className="flex flex-wrap items-center justify-center w-full gap-8 pt-40 gap-y-40 px-12">
             <FoodCardV2 img={dish1} title="Segunda - Feira" price1={19} price2={21} price3={23} opcao1="strogonoff de frango" 
               description="Acompanha batata palha e farofa" opcao2="Carne moída c/ batata" description2="Acompanha batata palha e farofa"/>        
             <FoodCardV2 img={dish2} title="Terça - Feira" price1={19} price2={21} price3={23} opcao1="virado á paulista" description="Acompanha Tutu de feijão, Pernil grelhado, Linguiça Toscana, Ovo, frito, Couve refogada, Farofa e Banana à milanesa"/>
-            <FoodCardV2 img={dish5} title="Quarta - Feira" price1={19} price2={21} price3={23} opcao1="frango à milanesa" description="Acompanha farofa e legumes refogados"/>
-            <FoodCardV2 img={dish4} title="Quinta - Feira" price1={19} price2={21} price3={23} opcao1="costela bovina com mandioca" description="Acompanha farofa" opcao2="Frango a parmegiana" description2="Acompanha legumes refogados e farofa"/>
-            <FoodCardV2 img={dish3} title="Sexta - Feira" price1={21} price2={25} price3={29} opcao1="feijoada" description="Nossa feijoada é composta por: Pernil, costelinha, carne seca, e calabresa. Acompanha vinagrete, farofa, torresmo e couve refogada."/>
+            <FoodCardV2 img={dish3} title="Quarta - Feira" price1={19} price2={21} price3={23} opcao1="frango à milanesa" description="Acompanha farofa e legumes refogados"/>
+            <div className="flex lg:flex-row flex-col gap-8 gap-y-40">
+              <FoodCardV2 img={dish4} title="Quinta - Feira" price1={19} price2={21} price3={23} opcao1="costela bovina com mandioca" description="Acompanha farofa" opcao2="Frango a parmegiana" description2="Acompanha legumes refogados e farofa"/>
+              <FoodCardV2 img={dish5} title="Sexta - Feira" price1={21} price2={25} price3={29} opcao1="feijoada" description="Nossa feijoada é composta por: Pernil, costelinha, carne seca, e calabresa. Acompanha vinagrete, farofa, torresmo e couve refogada."/>
+            </div>
           </div>      
         <div data-aos="fade-up" className="w-full h-full flex flex-col lg:flex-row items-center justify-evenly mt-64 mb-44">
           <div className="flex flex-wrap items-center justify-center gap-12 gap-y-52 z-10">
@@ -122,10 +124,12 @@ export default function Home() {
           </div>
           <Image data-aos="fade-left" alt="imagem da nossa nutriocionista" src={nutricionista} width={0} height={0} className="object-cover"/>
         </div>
-        <div className="flex flex-col w-full h-full items-center justify-center mt-20 px-4 py-28 bg-[#F3F4F4]">
-        <h2 data-aos="fade-left" className="text-5xl lg:text-6xl text-center font-bold font-davidLibre pb-5">Feedbacks dos Clientes</h2>
-        <span data-aos="fade-right" className="text-md text-center lg:w-[32rem] text-[#5C6574] leading-7 pb-16">Um pouco sobre os feedbacks dos nossos clientes que pediram e gostaram muito das nossas marmitas!</span>
-          <div data-aos="fade-bottom" className="flex flex-wrap items-center justify-center gap-24 mt-6">
+        <div className="flex flex-col w-full h-full items-center justify-center mt-20 pb-28 bg-[#F3F4F4]">
+          <div className="flex flex-col items-center w-full bg-primary py-8">
+            <h2 data-aos="fade-left" className="text-5xl lg:text-6xl text-center text-white font-bold font-davidLibre pb-5">Feedbacks dos Clientes</h2>
+            <span data-aos="fade-right" className="text-md text-center lg:w-[32rem] text-[#dfdfdf] leading-7">Um pouco sobre os feedbacks dos nossos clientes que pediram e gostaram muito das nossas marmitas!</span>
+          </div>
+          <div data-aos="fade-bottom" className="flex flex-wrap items-center justify-center pt-24 gap-24 mt-6 px-4">
             <FeedBacks description="Eu que agradeço o capricho de vocês, Meu Deus Nhoque maravilhoso. 😍😍" name="Rose" photo={user1} title="Comida espetacular"/>
             <FeedBacks description="Muito obrigado a comida de vocês é maravilhosa" name="João" photo={user2} title="Tempero maravilhoso"/>
             <FeedBacks description="Qualidade excelentíssima, maravilhosa, continuem assim que irão longe sucesso para vocês! já falei pro meu esposo ontem próxima iremos pegar aí❤" name="Flávia" photo={user3} title="Refeição completa"/>
