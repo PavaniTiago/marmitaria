@@ -64,7 +64,7 @@ export default function Home() {
         </div>
       </div>
       <div className="relative flex flex-col w-full h-full items-center justify-center bg-[#F3F4F4]">
-        <div data-aos="fade-up" id="menu" className="flex w-full bg-primary py-12 flex-col items-center justify-center relative">
+        <div data-aos="fade-up" id="menu" className=" flex w-full bg-primary py-12 flex-col items-center justify-center relative">
           <Image alt="elemento" src={element2} width={0} height={0} className="object-cover absolute top-4 right-[19rem] w-44" />
           <Image alt="elemento" src={element} width={0} height={0} className="object-cover absolute top-4 left-[22rem] w-36" />
           <h2 className="text-6xl text-center lg:text-start text-white font-bold font-davidLibre pb-5">Cardápio Semanal</h2>

@@ -24,7 +24,7 @@ export default function FoodCard({ title, price, price1, price2, price3, opcao1,
     return (
         <div className="relative flex flex-col items-center justify-center bg-white w-80 h-[34rem] rounded-xl rounded-tl-[4rem] rounde-br-[4rem] shadow-xl">
             <div className="absolute -top-20">
-                <Image src={img} alt="prato da marmitaria" width={0} height={0} className="object-cover rounded-full w-44 h-44 shadow-lg"/>
+                <Image src={img} alt="prato da marmitaria" width={0} height={0} className="object-contain w-52 h-52"/>
                 {price && 
                     <>
                         <div className="flex items-center justify-center absolute rounded-full h-12 w-12 top-0 right-[39%] translate-y-[-50%] bg-secondary text-white shadow-lg shadow-black/60">
