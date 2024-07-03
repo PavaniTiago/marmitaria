@@ -24,7 +24,7 @@ import dish4 from "../../public/dish4.png"
 import dish5 from "../../public/dish5.png"
 import fitnessDish from "../../public/fitnessdish.png"
 import dailyDish from "../../public/dailydish.png"
-import nutricionista from "../../public/nutricionista.png"
+import nutricionista from "../../public/nutri.png"
 import FoodCard from "@/components/ui/food-card";
 import { BenefitsList } from "@/components/ui/benefits-list";
 import { Input } from "@/components/ui/input";
@@ -122,7 +122,9 @@ export default function Home() {
               <Link target="_blank" href="https://whatsmenu.com.br/saboraoponto"><Button className="rounded-tl-xl rounded-br-xl text-md w-40 py-6">Peça agora</Button></Link>
             </div>
           </div>
-          <Image data-aos="fade-left" alt="imagem da nossa nutriocionista" src={nutricionista} width={0} height={0} className="object-cover"/>
+          <div className="md:w-[28rem] md:h-[28rem] w-[12rem] h-[12rem] rounded-full bg-primary overflow-hidden mb-6 md:mb-0">
+            <Image data-aos="fade-left" alt="imagem da nossa nutriocionista" src={nutricionista} width={0} height={0} className="object-cover"/>
+          </div>
         </div>
         <div className="flex flex-col w-full h-full items-center justify-center mt-20 pb-28 bg-[#F3F4F4]">
           <div className="flex flex-col items-center w-full bg-primary py-8">
