@@ -122,7 +122,7 @@ export default function Home() {
               <Link target="_blank" href="https://whatsmenu.com.br/saboraoponto"><Button className="rounded-tl-xl rounded-br-xl text-md w-40 py-6">Peça agora</Button></Link>
             </div>
           </div>
-          <div className="md:w-[32rem] md:h-[32rem] w-[12rem] h-[12rem] flex items-center justify-center mb-6 md:mb-0">
+          <div className="md:w-[32rem] md:h-[32rem] w-[12rem] h-[12rem] flex items-center overflow-hidden rounded-full justify-center mb-6 md:mb-0">
             <Image data-aos="fade-left" alt="imagem da nossa nutriocionista" src={nutricionista} width={0} height={0} className="object-cover"/>
           </div>
         </div>
