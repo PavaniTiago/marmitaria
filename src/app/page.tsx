@@ -70,21 +70,21 @@ export default function Home() {
           <h2 className="text-6xl text-center lg:text-start text-white font-bold font-davidLibre pb-5">Cardápio Semanal</h2>
           <span className="text-md lg:w-96 text-center text-[#e7e7e7] leading-7">Confira nosso cardápio semanal e clique no botão para realizar seu pedido.</span>
         </div>
-          <div data-aos="fade-up" className="flex flex-wrap items-center justify-center w-full gap-8 pt-40 gap-y-40 px-12">
-            <FoodCardV2 img={dish1} title="Segunda - Feira" price1={19} price2={21} price3={23} opcao1="strogonoff de frango" 
+            <div data-aos="fade-up" className="flex flex-wrap items-center justify-center w-full gap-8 pt-40 gap-y-40 px-12">
+            <FoodCardV2 img={dish1} title="Segunda - Feira" price1={20} price2={22} price3={29} opcao1="strogonoff de frango" 
               description="Acompanha batata palha e farofa" opcao2="Carne moída c/ batata" description2="Acompanha batata palha e farofa"/>        
-            <FoodCardV2 img={dish2} title="Terça - Feira" price1={19} price2={21} price3={23} opcao1="virado á paulista" description="Acompanha Tutu de feijão, Pernil grelhado, Linguiça Toscana, Ovo, frito, Couve refogada, Farofa e Banana à milanesa"/>
-            <FoodCardV2 img={dish3} title="Quarta - Feira" price1={19} price2={21} price3={23} opcao1="frango à milanesa" description="Acompanha farofa e legumes refogados"/>
+            <FoodCardV2 img={dish2} title="Terça - Feira" price1={22} price2={25} price3={29} opcao1="virado á paulista" description="Acompanha Tutu de feijão, Pernil grelhado, Linguiça Toscana, Ovo, frito, Couve refogada, Farofa e Banana à milanesa"/>
+            <FoodCardV2 img={dish3} title="Quarta - Feira" price1={20} price2={22} price3={29} opcao1="frango à milanesa" description="Acompanha farofa e legumes refogados"/>
             <div className="flex lg:flex-row flex-col gap-8 gap-y-40">
-              <FoodCardV2 img={dish4} title="Quinta - Feira" price1={19} price2={21} price3={23} opcao1="costela bovina com mandioca" description="Acompanha farofa" opcao2="Frango a parmegiana" description2="Acompanha legumes refogados e farofa"/>
-              <FoodCardV2 img={dish5} title="Sexta - Feira" price1={21} price2={25} price3={29} opcao1="feijoada" description="Nossa feijoada é composta por: Pernil, costelinha, carne seca, e calabresa. Acompanha vinagrete, farofa, torresmo e couve refogada."/>
+              <FoodCardV2 img={dish4} title="Quinta - Feira" price1={22} price2={26} price3={30} opcao1="costela bovina com mandioca" description="Acompanha farofa" opcao2="Frango a parmegiana" description2="Acompanha legumes refogados e farofa" opcao3="Peixe a milanesa" description3="Acompanha legumes refogados e farofa" price4={20} price5={22} price6={24}/>
+              <FoodCardV2 img={dish5} title="Sexta - Feira" price1={22} price2={26} price3={30} opcao1="feijoada" description="Nossa feijoada é composta por: Pernil, costelinha, carne seca, e calabresa. Acompanha vinagrete, farofa, torresmo e couve refogada."/>
             </div>
-          </div>      
+            </div>      
         <div data-aos="fade-up" className="w-full h-full flex flex-col lg:flex-row items-center justify-evenly mt-64 mb-44">
-          <div className="flex flex-wrap items-center justify-center gap-12 gap-y-52 z-10">
-            <FoodCard img={fitnessDish} title="Prato Fit" optionalDescription={["light", "Arroz integral", "1 proteína", "Refogados", "Salada", "1 sache de molho", "1 barra de cereal"]} price={25}/>
-            <FoodCard img={dailyDish} title="Prato Diário" optionalDescription={["ovo frito", "frango grelhado", "bife grelhado", "omelete c/ queijo", "omelete c/ legumes", "omelete r&j queijo e goiabada", "omelete de calabresa"]} price1={19} price2={21} price3={23} vegetable="Alface, tomate e cebola"/>
-          </div>
+            <div className="flex flex-wrap items-center justify-center gap-12 gap-y-52 z-10">
+            <FoodCard img={fitnessDish} title="Prato Fit" optionalDescription={["Light", "Arroz Integral", "1 Proteína", "Refogados", "Salada", "1 Sache De Molho", "1 Barra De Cereal"]} price={25}/>
+            <FoodCard img={dailyDish} title="Prato Diário" optionalDescription={["Ovo Frito", "Frango Grelhado", "Bife Grelhado", "Omelete C/ Queijo", "Omelete C/ Legumes", "Omelete R&J Queijo E Goiabada", "Omelete De Calabresa"]} price1={19} price2={21} price3={23} vegetable="Alface, Tomate E Cebola"/>
+            </div>
           <div className="relative flex flex-col h-full mt-40 text-center lg:text-start">
             <Image alt="elemento" src={element3} width={0} height={0} className="object-cover absolute top-16 -right-[16rem]" />
             <Image alt="elemento" src={element2} width={0} height={0} className="object-cover absolute -top-52 right-[16rem]" />
@@ -104,7 +104,7 @@ export default function Home() {
             <Image alt="elemento" src={element5} width={0} height={0} className="object-cover absolute -top-44 right-[28rem]" />
             <Image alt="elemento" src={element} width={0} height={0} className="object-cover absolute -bottom-12 left-[38rem]" />
             <h2 className="text-5xl lg:text-6xl text-center lg:text-start font-bold self-start font-davidLibre pb-5">Nossa Nutricionista</h2>
-            <span className="text-md text-center lg:text-start w-full lg:max-w-2xl self-start text-[#5C6574] leading-7 pb-12 px-4">
+            <span className="text-md text-center lg:text-start w-full lg:max-w-2xl self-start text-[#5C6574] leading-7 pb-12">
               Nossas marmitas, criadas pela nossa experiente nutricionista, são a combinação perfeita entre sabor e saúde. 
               Com ingredientes frescos e balanceados, cada refeição é uma escolha inteligente para quem busca uma alimentação nutritiva e prática. 
               Deixe que nossa nutricionista cuide da sua saúde enquanto você aproveita o prazer de uma refeição deliciosa.
