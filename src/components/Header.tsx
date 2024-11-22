@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image";
-import logo from "../../public/logo.png"
+import logo from "../../public/logo2.png"
 import Link from "next/link";
 import { Button } from "./ui/button";
 import {
@@ -19,7 +19,7 @@ import {
 export function Header(){
     return (
         <header className="flex absolute w-full items-center backdrop-blur-xl justify-between px-12 lg:px-24 h-28 lg:h-40">
-            <div className="flex items-center justify-center w-24 h-24 lg:w-28 lg:h-28 rounded-full bg-white">
+            <div className="flex items-center justify-center w-24 h-24 lg:w-[102px] lg:h-[100px] rounded-full bg-white">
                 <Image src={logo} alt="marmitaria logo" height={0} width={0} className="object-cover w-32 h-32 lg:w-36 lg:h-36 mt-[2.5px]"></Image>
             </div>
             <div className="hidden lg:block">

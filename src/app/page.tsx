@@ -3,7 +3,7 @@
 import Image from "next/image";
 import background from "../../public/background.jpg"
 import background2 from "../../public/background2.png"
-import logo from "../../public/logo.png"
+import logo from "../../public/logo2.png"
 import { Button } from "@/components/ui/button";
 import { FacebookLogo, Phone } from "@phosphor-icons/react/dist/ssr";
 import { InstagramLogoIcon } from "@radix-ui/react-icons";
@@ -79,7 +79,7 @@ export default function Home() {
             <FoodCardV2 img={dish1} title="Segunda - Feira" price1={20} price2={22} price3={29} opcao1="strogonoff de frango" 
               description="Acompanha batata palha e farofa" opcao2="Carne moída c/ batata" description2="Acompanha batata palha e farofa"/>        
             <FoodCardV2 img={dish2} title="Terça - Feira" price1={22} price2={25} price3={29} opcao1="virado á paulista" description="Acompanha Tutu de feijão, Pernil grelhado, Linguiça Toscana, Ovo, frito, Couve refogada, Farofa e Banana à milanesa"/>
-            <FoodCardV2 img={dish8} title="Quarta - Feira" price1={20} price2={22} price3={29} opcao1="frango à milanesa" description="Acompanha farofa e legumes refogados"/>
+            <FoodCardV2 img={dish8} title="Quarta - Feira" price1={20} price2={22} price3={29} opcao1="frango à milanesa" description="Acompanha farofa e legumes refogados" opcao2="nhome a bolognesa" description2="Acompanha legumes refogados e Farofa"/>
             <div className="flex lg:flex-row flex-col gap-8 gap-y-40">
               <FoodCardV2 img={dish4} img2={dish6} img3={dish3} title="Quinta - Feira" price1={22} price2={26} price3={30} opcao1="costela bovina com mandioca" description="Acompanha farofa" opcao2="Frango a parmegiana" description2="Acompanha legumes refogados e farofa" opcao3="Peixe a milanesa" description3="Acompanha legumes refogados e farofa" price4={20} price5={22} price6={24}/>
               <FoodCardV2 img={dish5} title="Sexta - Feira" price1={22} price2={26} price3={30} opcao1="feijoada" description="Nossa feijoada é composta por: Pernil, costelinha, carne seca, e calabresa. Acompanha vinagrete, farofa, torresmo e couve refogada."/>

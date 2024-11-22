@@ -77,9 +77,13 @@ export default function FoodCard({
             className="object-contain w-44 h-44"
           />
         )}
-        {price1 && (
+        {price1 && title !== "Quinta - Feira" && (
           <>
-            <div className={"flex items-center justify-center absolute rounded-full h-12 w-12 top-2 left-0 bg-primary text-white shadow-lg shadow-black/60"}>
+            <div
+              className={
+                "flex items-center justify-center absolute rounded-full h-12 w-12 top-2 left-0 bg-primary text-white shadow-lg shadow-black/60"
+              }
+            >
               <span className="text-sm font-bold">R$ {price1}</span>
               <span className="absolute -top-8 text-primary text-xl font-bold">
                 P
@@ -111,6 +115,25 @@ export default function FoodCard({
           <span className="text-sm font-light text-[#5C6574]">
             {description}
           </span>
+          {title === "Quinta - Feira" && (
+            <div className="flex justify-center space-x-3">
+              {price1 && (
+                <div className="flex items-center border-red-900 shadow-md border justify-center rounded-full h-8 w-20 bg-primary text-white">
+                  <span className="text-sm font-bold">P: R$ {price1}</span>
+                </div>
+              )}
+              {price2 && (
+                <div className="flex items-center border-red-900 shadow-md border justify-center rounded-full h-8 w-20 bg-primary text-white">
+                  <span className="text-sm font-bold">M: R$ {price1}</span>
+                </div>
+              )}
+              {price3 && (
+                <div className="flex items-center border-red-900 shadow-md border justify-center rounded-full h-8 w-20 bg-primary text-white">
+                  <span className="text-sm font-bold">G: R$ {price3}</span>
+                </div>
+              )}
+            </div>
+          )}
           {opcao2 && (
             <>
               <span className="text-lg font-semibold text-start first-letter:uppercase mt-2">
