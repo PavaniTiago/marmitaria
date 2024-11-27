@@ -88,7 +88,7 @@ export default function Home() {
         <div data-aos="fade-up" className="w-full h-full flex flex-col lg:flex-row items-center justify-evenly mt-64 mb-44">
             <div className="flex flex-wrap items-center justify-center gap-12 gap-y-52 z-10">
             <FoodCard img={fitnessDish} title="Prato Fit" optionalDescription={["Light", "Arroz Integral", "1 Proteína", "Refogados", "Salada", "1 Sache De Molho", "1 Barra De Cereal"]} price={25}/>
-            <FoodCard img={dish10} img2={dish7} img3={dish9} title="Todos os dias" optionalDescription={["Ovo Frito", "Frango Grelhado", "Bife Grelhado", "Omelete C/ Queijo", "Omelete C/ Legumes", "Omelete R&J Queijo E Goiabada", "Omelete De Calabresa"]} price1={19} price2={21} price3={23} vegetable="Alface, Tomate E Cebola"/>
+            <FoodCard img={dish10} img2={dish7} img3={dish9} title="Todos os dias" optionalDescription={["Ovo Frito", "Frango Grelhado", "Bife Grelhado", "Omelete C/ Queijo", "Omelete C/ Legumes", "Omelete R&J Queijo E Goiabada", "Omelete De Calabresa"]} price1={20} price2={22} price3={24} vegetable="Alface, Tomate E Cebola"/>
             </div>
           <div className="relative flex flex-col h-full mt-40 text-center lg:text-start">
             <Image alt="elemento" src={element3} width={0} height={0} className="object-cover absolute top-16 -right-[16rem]" />
