@@ -124,7 +124,7 @@ export default function FoodCard({
               )}
               {price2 && (
                 <div className="flex items-center border-red-900 shadow-md border justify-center rounded-full h-8 w-20 bg-primary text-white">
-                  <span className="text-sm font-bold">M: R$ {price1}</span>
+                  <span className="text-sm font-bold">M: R$ {price2}</span>
                 </div>
               )}
               {price3 && (
